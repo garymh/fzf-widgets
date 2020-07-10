@@ -10,7 +10,7 @@ fi
 
 selector-init 'git checkout'
 
-git branch --list -v | \
+git branch --list | \
   grep -v '^\*' | \
   sed 's/^  *//' | \
   selector-select $FZF_WIDGETS_OPTS[git-checkout-branch] +m
